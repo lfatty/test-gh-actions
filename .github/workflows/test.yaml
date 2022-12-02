@@ -1,4 +1,4 @@
-ame: Security check - Bandit
+name: Security check - Bandit
 
 on: push
 
