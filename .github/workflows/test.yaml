@@ -1,29 +1,15 @@
-name: Security check - Bandit
+name: sast 
 
-on: push
+on:
+  push:
 
 jobs:
-  build:
+  checkout-repo:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        os: [ ubuntu-latest, macos-latest ]
-        python-version: [ '2.7.17', '3.6.10' ]
-    name: Python ${{ matrix.python-version }} ${{ matrix.os }} 
-
     steps:
-    - uses: actions/checkout@v2
-
-    - name: Security check - Bandit
-      uses: ./
-      with:
-        python_version: ${{ matrix.python-version }}
-        project_path: .
-        ignore_failure: true
-
-    - name: Security check report artifacts
-      uses: actions/upload-artifact@v1
-      # if: failure()
-      with:
-        name: Security report
-        path: output/security_report.txt
+    - name: Checkout 🛎️
+      uses: actions/checkout@v2
+    - name : Installing the bandit tool
+      run : |
+        pip install bandit
+        bandit -r app 
