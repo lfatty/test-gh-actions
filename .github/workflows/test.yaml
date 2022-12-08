@@ -1,10 +1,6 @@
 name: test 
 
-on:
-  push:
-    branches:
-      - main
-
+on: workflow_dispatch
 jobs:
   print_hello:
     runs-on: ubuntu-latest
