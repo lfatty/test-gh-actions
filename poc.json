@@ -3,7 +3,7 @@
     "urls": [
         {
             "url": "https://raw.githubusercontent.com/lfatty/test-gh-actions/main/poc-html-injection.yaml",
-            "name": "POC of HTML INJECTED BY Lamin"
+            "name": "POC of HTML INJECTION"
         }
     ]
 }
